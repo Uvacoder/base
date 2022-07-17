@@ -1,18 +1,18 @@
-<img src="https://cdn.statically.io/gh/craigary/nobelium/main/Nobelium-Logo.svg" width="50" height="50">
+<img src="https://cdn.statically.io/gh/pycoder2000/blog/main/Nobelium-Logo.svg" width="50" height="50">
 
 # Nobelium
 
 A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://vercel.com?utm_source=Craigary&utm_campaign=oss).
 
 <p>
-  <a aria-label="GitHub commit activity" href="https://github.com/craigary/nobelium/commits/main" title="GitHub commit activity">
-    <img src="https://img.shields.io/github/commit-activity/m/craigary/nobelium?style=for-the-badge">
+  <a aria-label="GitHub commit activity" href="https://github.com/pycoder2000/blog/commits/main" title="GitHub commit activity">
+    <img src="https://img.shields.io/github/commit-activity/m/pycoder2000/blog?style=for-the-badge">
   </a>
-  <a aria-label="GitHub contributors" href="https://github.com/craigary/nobelium/graphs/contributors" title="GitHub contributors">
-    <img src="https://img.shields.io/github/contributors/craigary/nobelium?color=orange&style=for-the-badge">
+  <a aria-label="GitHub contributors" href="https://github.com/pycoder2000/blog/graphs/contributors" title="GitHub contributors">
+    <img src="https://img.shields.io/github/contributors/pycoder2000/blog?color=orange&style=for-the-badge">
   </a>
   <a aria-label="Build status" href="#" title="Build status">
-    <img src="https://img.shields.io/github/deployments/craigary/nobelium/Preview?logo=Vercel&style=for-the-badge">
+    <img src="https://img.shields.io/github/deployments/pycoder2000/blog/Preview?logo=Vercel&style=for-the-badge">
   </a>
   <a aria-label="Powered by Vercel" href="https://vercel.com?utm_source=Craigary&utm_campaign=oss" title="Powered by Vercel">
     <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" height="28">
@@ -22,7 +22,7 @@ A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://ve
 Demo: [https://kbase.vercel.app/](https://kbase.vercel.app/)
 
 <details><summary>Screenshot</summary>
-<img src="https://github.com/craigary/nobelium/blob/main/desktop.png?raw=true">
+<img src="https://github.com/pycoder2000/blog/blob/main/desktop.png?raw=true">
 </details>
 
 ## Highlights ✨
@@ -53,7 +53,7 @@ Demo: [https://kbase.vercel.app/](https://kbase.vercel.app/)
 
 - Star this repo 😉
 - Duplicate [this Notion template](https://craigary.notion.site/adc3552cfc73442ab5048d4b1eb0079a), and share it to the public
-- [Fork](https://github.com/craigary/nobelium/fork) this project
+- [Fork](https://github.com/pycoder2000/blog/fork) this project
 - Customize `blog.config.js`
 - _(Optional)_ Replace `favicon.svg`, and `favicon.ico` in `/public` folder with your own
 - Deploy on [Vercel](https://vercel.com), set following environment variables：
@@ -63,12 +63,12 @@ Demo: [https://kbase.vercel.app/](https://kbase.vercel.app/)
 - **That's it!** Easy-peasy?
 
 <details><summary>Wait for a sec, what is Page ID？</summary>
-  <img src="https://github.com/craigary/nobelium/blob/main/pageid.png?raw=true">
+  <img src="https://github.com/pycoder2000/blog/blob/main/pageid.png?raw=true">
 </details>
 
 ## Play With Docker
 
-Unofficial, thanks to [@Vaayne](https://github.com/craigary/nobelium/pull/157)'s work!
+Unofficial, thanks to [@Vaayne](https://github.com/pycoder2000/blog/pull/157)'s work!
 
 ### Build Docker image yourself
 
@@ -88,10 +88,10 @@ docker run -d --name nobelium -p 3000:3000 -e NOTION_PAGE_ID=${NOTION_PAGE_ID} n
 
 ```
 # pull image
-docker pull ghcr.io/craigary/nobelium:main
+docker pull ghcr.io/pycoder2000/blog:main
 
 # run with docker
-docker run -d --name nobelium -p 3000:3000 -e NOTION_PAGE_ID=${NOTION_PAGE_ID} ghcr.io/craigary/nobelium:main
+docker run -d --name nobelium -p 3000:3000 -e NOTION_PAGE_ID=${NOTION_PAGE_ID} ghcr.io/pycoder2000/blog:main
 ```
 
 ## Roadmap
@@ -124,11 +124,11 @@ Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4
 ## Contributors
 
 <table><tr align="left">
-  <td align="center"><a href="https://github.com/craigary"><img src="https://avatars.githubusercontent.com/u/10571717" width="64px;"alt="Parth Desai"/><br/><sub><b>Parth Desai</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=craigary" title="Owner" >🎫 🔧 🎨 🐛</a></td>
-  <td align="center"><a href="https://github.com/yokinist"><img src="https://avatars.githubusercontent.com/u/19779874" width="64px;" alt="yokinist"/><br/><sub><b>yokinist</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=yokinist" title="yokinist" >🔧 🐛</a></td>
-  <td align="center"><a href="https://github.com/reycn"><img src="https://avatars.githubusercontent.com/u/11225092" width="64px;" alt="Reynard"/><br/><sub><b>Reynard</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=reycn" title="Reynard" > 🎨 🐛</a></td>
-  <td align="center"><a href="https://github.com/Niinjoy"><img src="https://avatars.githubusercontent.com/u/39721307" width="64px;" alt="Niin"/><br/><sub><b>Niin</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=Niinjoy" title="Niin" >🔧 🐛</a></td>
-  <td align="center"><a href="https://github.com/ruter"><img src="https://avatars.githubusercontent.com/u/8568876" width="64px;" alt="Ruter"/><br/><sub><b>Ruter</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=ruter" title="Ruter" >🔧 🐛</a></td>
+  <td align="center"><a href="https://github.com/pycoder2000"><img src="https://avatars.githubusercontent.com/u/10571717" width="64px;"alt="Parth Desai"/><br/><sub><b>Parth Desai</b></sub></a><br/><a href="https://github.com/pycoder2000/blog/commits?author=pycoder2000" title="Owner" >🎫 🔧 🎨 🐛</a></td>
+  <td align="center"><a href="https://github.com/yokinist"><img src="https://avatars.githubusercontent.com/u/19779874" width="64px;" alt="yokinist"/><br/><sub><b>yokinist</b></sub></a><br/><a href="https://github.com/pycoder2000/blog/commits?author=yokinist" title="yokinist" >🔧 🐛</a></td>
+  <td align="center"><a href="https://github.com/reycn"><img src="https://avatars.githubusercontent.com/u/11225092" width="64px;" alt="Reynard"/><br/><sub><b>Reynard</b></sub></a><br/><a href="https://github.com/pycoder2000/blog/commits?author=reycn" title="Reynard" > 🎨 🐛</a></td>
+  <td align="center"><a href="https://github.com/Niinjoy"><img src="https://avatars.githubusercontent.com/u/39721307" width="64px;" alt="Niin"/><br/><sub><b>Niin</b></sub></a><br/><a href="https://github.com/pycoder2000/blog/commits?author=Niinjoy" title="Niin" >🔧 🐛</a></td>
+  <td align="center"><a href="https://github.com/ruter"><img src="https://avatars.githubusercontent.com/u/8568876" width="64px;" alt="Ruter"/><br/><sub><b>Ruter</b></sub></a><br/><a href="https://github.com/pycoder2000/blog/commits?author=ruter" title="Ruter" >🔧 🐛</a></td>
 </tr></table>
 
 ## License

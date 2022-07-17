@@ -42,7 +42,7 @@ const Layout = ({
                   alt={BLOG.author}
                   width={24}
                   height={24}
-                  src={`https://gravatar.com/avatar/${emailHash}`}
+                  src={'https://gravatar.com/avatar/140df4c724dc6f3382bab351142b4c9b'}
                   className="rounded-full"
                 />
                 <p className="ml-2 md:block">{BLOG.author}</p>
@@ -57,7 +57,7 @@ const Layout = ({
             </div>
             {frontMatter.tags && (
               <div className="flex flex-nowrap max-w-full overflow-x-auto article-tags">
-                {frontMatter.tags.map(tag => (
+                {frontMatter.tags.map((tag) => (
                   <TagItem key={tag} tag={tag} />
                 ))}
               </div>
