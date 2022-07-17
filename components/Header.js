@@ -70,7 +70,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
         <div className="flex items-center">
           <Link href="/">
             <a aria-label={BLOG.title}>
-              <div>
+              <div className="grid place-items-start">
                 <SvgComponent className="h-10" />
               </div>
             </a>
