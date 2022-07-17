@@ -8,8 +8,8 @@
     "url": "https://github.com/craigary/nobelium.git"
   },
   "author": {
-    "name": "Craig Hart",
-    "email": "i@craigary.net",
+    "name": "Parth Desai",
+    "email": "desaiparth2000@gmail.com",
     "url": "http://craigary.net"
   },
   "scripts": {
@@ -48,6 +48,6 @@
   },
   "bugs": {
     "url": "https://github.com/craigary/nobelium/issues",
-    "email": "i@craigary.net"
+    "email": "desaiparth2000@gmail.com"
   }
 }
