@@ -1,6 +1,8 @@
-<img src="https://cdn.statically.io/gh/pycoder2000/blog/main/Nobelium-Logo.svg" width="50" height="50">
+<div align="center">
+  <img alt="Logo" src="https://github.com/pycoder2000/blog/raw/master/public/static/images/logo.png" width="100" />
+</div>
 
-# Nobelium
+# Knowledge Base
 
 A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://vercel.com?utm_source=Craigary&utm_campaign=oss).
 
@@ -14,15 +16,12 @@ A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://ve
   <a aria-label="Build status" href="#" title="Build status">
     <img src="https://img.shields.io/github/deployments/pycoder2000/blog/Preview?logo=Vercel&style=for-the-badge">
   </a>
-  <a aria-label="Powered by Vercel" href="https://vercel.com?utm_source=Craigary&utm_campaign=oss" title="Powered by Vercel">
-    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" height="28">
-  </a>
 </p>
 
 Demo: [https://kbase.vercel.app/](https://kbase.vercel.app/)
 
 <details><summary>Screenshot</summary>
-<img src="https://github.com/pycoder2000/blog/blob/main/desktop.png?raw=true">
+<img src="https://github.com/pycoder2000/base/raw/main/desktop.png?raw=true">
 </details>
 
 ## Highlights ✨
