@@ -1,17 +1,24 @@
-import { useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import BLOG from '@/blog.config'
 import { useLocale } from '@/lib/locale'
 import SvgComponent from '@/components/SVG'
+import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
+import { AppContext } from '@/context/app-context'
 
 const NavBar = () => {
   const locale = useLocale()
   const links = [
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
     { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.RSS, to: '/feed', show: true },
-    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 2, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
+  const { context, setContext } = useContext(AppContext)
+
+  const toggle = () => {
+    document.documentElement.classList.toggle('dark')
+    setContext({ isDark: !context.isDark })
+  }
   return (
     <div className="flex-shrink-0">
       <ul className="flex flex-row">
@@ -20,7 +27,7 @@ const NavBar = () => {
             link.show && (
               <li
                 key={link.id}
-                className="block ml-4 text-black dark:text-gray-50 nav"
+                className="block ml-4 text-gray-400 hover:text-black dark:hover:text-gray-50 nav"
               >
                 <Link href={link.to}>
                   <a>{link.name}</a>
@@ -28,6 +35,21 @@ const NavBar = () => {
               </li>
             )
         )}
+        <li className="block ml-4 nav text-gray-400">
+          {context.isDark
+            ? (
+            <IoSunnyOutline
+              onClick={toggle}
+              className="w-6 h-6 -mt-0.5 cursor-pointer hover:text-white hover:scale-110 active:scale-90 transition-transform duration-200"
+            />
+              )
+            : (
+            <IoMoonSharp
+              onClick={toggle}
+              className="w-5 h-5 cursor-pointer hover:text-black hover:scale-110 active:scale-90 transition-transform duration-200"
+            />
+              )}
+        </li>
       </ul>
     </div>
   )

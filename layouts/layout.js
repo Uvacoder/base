@@ -47,7 +47,7 @@ const Layout = ({
                 />
                 <p className="ml-2 md:block">{BLOG.author}</p>
               </a>
-              <span className="block">&nbsp;/&nbsp;</span>
+              <span className="block">&nbsp;|&nbsp;</span>
             </div>
             <div className="mr-2 mb-4 md:ml-0">
               {formatDate(
@@ -84,7 +84,7 @@ const Layout = ({
         <a>
           <button
             onClick={() => router.push(BLOG.path || '/')}
-            className="mt-2 cursor-pointer hover:text-black dark:hover:text-gray-100"
+            className="mt-2 cursor-pointer hover:text-black dark:hover:text-gray-100 transition duration-400"
           >
             ← {locale.POST.BACK}
           </button>
@@ -92,7 +92,7 @@ const Layout = ({
         <a>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="mt-2 cursor-pointer hover:text-black dark:hover:text-gray-100"
+            className="mt-2 cursor-pointer hover:text-black dark:hover:text-gray-100 transition duration-400"
           >
             ↑ {locale.POST.TOP}
           </button>

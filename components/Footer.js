@@ -1,5 +1,5 @@
 import BLOG from '@/blog.config'
-import Vercel from '@/components/Vercel'
+
 const Footer = ({ fullWidth }) => {
   const d = new Date()
   const y = d.getFullYear()
@@ -14,9 +14,13 @@ const Footer = ({ fullWidth }) => {
       <div className="my-4 text-sm leading-6">
         <div className="flex align-baseline justify-between flex-wrap">
           <p>
-            © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
+            <a
+              href="https://musing.vercel.app"
+              className="dark:hover:text-white hover:text-black transition duration-300"
+            >
+              © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
+            </a>
           </p>
-          <Vercel />
         </div>
       </div>
     </div>

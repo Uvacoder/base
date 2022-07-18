@@ -6,7 +6,7 @@ const BLOG = {
   description:
     'Today I Learnt - A list of all the things I learn on a daily basis.',
   lang: 'en-US',
-  appearance: 'auto',
+  appearance: 'dark',
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff',
   darkBackground: '#000',

@@ -10,7 +10,7 @@ const Tags = ({ tags, currentTag }) => {
           return (
             <li
               key={key}
-              className={`mr-3 font-medium border whitespace-nowrap dark:text-gray-300 ${
+              className={`mr-3 font-normal border whitespace-nowrap dark:text-gray-300 dark:hover:text-white hover:text-gray-900 dark:hover:border-white dark:hover:ring-white ${
                 selected
                   ? 'text-white bg-black border-black dark:bg-gray-600 dark:border-gray-600'
                   : 'bg-gray-100 border-gray-100 text-gray-400 dark:bg-night dark:border-gray-800'
@@ -20,9 +20,7 @@ const Tags = ({ tags, currentTag }) => {
                 key={key}
                 href={selected ? '/search' : `/tag/${encodeURIComponent(key)}`}
               >
-                <a className="px-4 py-2 block">
-                  {`${key} (${tags[key]})`}
-                </a>
+                <a className="px-4 py-2 block">{`${key} (${tags[key]})`}</a>
               </Link>
             </li>
           )
