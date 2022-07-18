@@ -14,6 +14,7 @@ const BLOG = {
   since: 2022, // If leave this empty, current year will be used.
   postsPerPage: 7,
   sortByDate: true,
+  showProject: true,
   showAbout: true,
   showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
@@ -25,6 +26,7 @@ const BLOG = {
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN, // Useful if you prefer not to make your database public
+  notionProjectPageId: process.env.NOTION_PROJECT_PAGE_ID,
   analytics: {
     provider: '', // Currently we support Google Analytics and Ackee, please fill with 'ga' or 'ackee', leave it empty to disable it.
     ackeeConfig: {
