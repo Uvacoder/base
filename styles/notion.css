@@ -1,7 +1,98 @@
+@media (prefers-color-scheme:dark) {
+  :root {
+    --fg-color-0: #6b728080;
+    --notion-primary: #DF5452;
+    --notion-pink: #D15796;
+    --notion-blue: #5E87C9;
+    --notion-purple: #9D68D3;
+    --notion-teal: #529E72;
+    --notion-yellow: #CA9849;
+    --notion-orange: #C77D48;
+    --notion-brown: #BA856F;
+    --notion-gray: #9B9B9B;
+    --notion-primary_background: #522E2A;
+    --notion-pink_background: #4E2C3C;
+    --notion-blue_background: #143A4E;
+    --notion-purple_background: #3C2D49;
+    --notion-teal_background: #243D30;
+    --notion-yellow_background: #564328;
+    --notion-orange_background: #5C3B23;
+    --notion-brown_background: #4A3228;
+    --notion-gray_background: #2F2F2F;
+    --notion-primary_background_co: #362422;
+    --notion-pink_background_co: #302228;
+    --notion-blue_background_co: #1D282E;
+    --notion-purple_background_co: #2B2431;
+    --notion-teal_background_co: #222B26;
+    --notion-yellow_background_co: #392E1E;
+    --notion-orange_background_co: #38281E;
+    --notion-brown_background_co: #2F2723;
+    --notion-gray_background_co: #191919;
+  }
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/IBMPlexMono-Regular.woff2") format("woff2");
+}
+
+.notion b {
+  @apply contrast-150;
+}
+
+.notion-link {
+  @apply border-b hover:border-b
+       /*text-primary-500/80*/ hover:text-primary-500/100 hover:border-b-primary-500 
+       /*dark:text-primary-300/100*/ /*dark:border-b-primary-300/100*/ dark:hover:text-primary-300/100 dark:hover:border-b-primary-300/100 dark:border-b-gray-200/70 dark:text-gray-100 text-gray-900;
+}
+
+.notion-list li {
+  @apply p-0;
+}
+
+.notion-list {
+  @apply py-2;
+}
+
+.notion-toggle {
+  @apply py-0;
+}
+
+.notion-callout {
+  @apply my-2;
+  @apply dark:border-gray-200/20;
+}
+
+.notion-hr {
+  @apply border border-gray-200/50 dark:border-gray-600/50;
+  @apply my-2;
+}
+
+.notion ::selection {
+  background: rgba(45, 170, 219, 0.3);
+}
+
+.notion ::marker {
+  @apply text-primary-500 dark:text-primary-300;
+}
+
+.notion-simple-table {
+  @apply my-2 text-left border-0;
+}
+
+.notion-simple-table td {
+  @apply border-gray-200/50 dark:border-gray-600/50;
+  @apply px-3 pb-1.5 pt-1.5;
+}
+
 /* NOTION CSS OVERRIDE */
 
 .notion {
-  @apply text-gray-600 dark:text-gray-300;
+  @apply text-gray-700 dark:text-gray-200;
   overflow-wrap: break-word;
 }
 .notion,
@@ -12,12 +103,26 @@
   @apply p-0;
   @apply my-3;
 }
-.notion-page-link {
-  color: inherit;
+
+@media screen and (min-width: 768px) {
+  .notion, .notion-text, .notion-quote {
+    @apply text-justify;
+  }
 }
 
-svg.notion-page-icon {
-  @apply hidden;
+.notion-quote {
+  @apply text-base;
+  @apply py-1 px-2 ml-[3px];
+  @apply border-primary-500 dark:border-primary-300;
+}
+
+.notion-h1, .notion-h2, .notion-h3 {
+  @apply mb-4;
+  @apply text-left;
+}
+
+.notion-page-link {
+  color: inherit;
 }
 
 svg + .notion-page-title-text {
@@ -26,21 +131,32 @@ svg + .notion-page-title-text {
 
 .notion-bookmark {
   @apply border;
-  @apply border-gray-100;
+  @apply dark:border-gray-200/20;
   color: inherit;
 }
 
 .notion-bookmark .notion-bookmark-title,
 .notion-bookmark .notion-bookmark-link div {
-  @apply text-gray-900 dark:text-gray-200;
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.notion-bookmark:hover {
+  @apply border-primary-500 dark:border-primary-300;
 }
 
 .notion-bookmark .notion-bookmark-description {
-  @apply text-gray-600 dark:text-gray-300;
+  @apply text-gray-600 dark:text-gray-400;
 }
 
-.notion-code > code {
-  @apply text-gray-900;
+:not(pre)>code[class*=language-], pre[class*=language-] {
+  background-color: #191919 !important;
+  padding: 8px 16px;
+  @apply border border-gray-200/20;
+  scrollbar-width: thin;
+}
+
+code[class*=language-], pre[class*=language-] {
+  font-family: 'IBM Plex Mono','Consolas','Monaco','Andale Mono','Ubuntu Mono',monospace !important;
 }
 
 pre[class*='language-'] {
@@ -50,6 +166,23 @@ pre[class*='language-'] {
 .notion-bookmark:hover {
   @apply border-blue-400;
 }
+
+/* scrollbar */
+pre, div, p {
+  scrollbar-width: thin !important;
+  scrollbar-color: #b8b8b880 #ffffff00 !important;
+}
+pre::-webkit-scrollbar, div::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+pre::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
+  background: #ffffff00 !important;
+}
+pre::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+  background-color: #b8b8b880 !important;
+}
+
 .notion-viewport {
   z-index: -10;
 }
@@ -84,4 +217,63 @@ pre[class*='language-'] {
 }
 .notion-collection-row {
   @apply hidden;
+}
+
+.notion-table-header {
+  @apply dark:text-gray-200/50;
+}
+@media (prefers-color-scheme:dark) {
+  .notion-page-icon {
+    /*@apply dark:fill-gray-200/50;*/
+    fill: rgb(229 231 235 / 0.5);
+    /*@apply dark:text-gray-200/50;*/
+  }
+  .notion-table-header-inner {
+    /*@apply dark:border-y-gray-200/50;*/
+    border-top-color: rgb(229 231 235 / 0.2);
+    border-bottom-color: rgb(229 231 235 / 0.2);
+  }
+  .notion-table-view-header-cell-inner {
+    /*@apply dark:border-r-gray-200/50;*/
+    border-top-color: rgb(229 231 235 / 0.2);
+    border-bottom-color: rgb(229 231 235 / 0.2);
+    border-right-color: rgb(229 231 235 / 0.2);
+  }
+  .notion-collection-column-title-icon {
+    fill: rgb(229 231 235 / 0.5);
+    /*@apply dark:fill-gray-200/50;*/
+  }
+  .notion-table-row {
+    /*@apply dark:border-b-gray-200/50;*/
+    border-bottom-color: rgb(229 231 235 / 0.2);
+  }
+  .notion-table-cell {
+    /*padding: 2px 2px 3px;*/
+    /*@apply dark:border-r-gray-200/50;*/
+    border-right-color: rgb(229 231 235 / 0.2);
+  }
+}
+
+.notion-equation:active, .notion-equation:focus {
+  background: rgba(45, 170, 219, 0.3);
+}
+
+.notion-inline-code {
+  @apply text-primary-500 dark:text-primary-300;
+  @apply bg-primary-300/20 dark:bg-white/10;
+  font-size: 85% !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+}
+
+.notion-text:first-child {
+  @apply mt-2;
+}
+
+.notion-table-of-contents {
+  @apply my-2;
+}
+
+/* floating TOC */
+.notion-table-of-contents {
+  @apply xl:max-w-xs xl:max-h-[30rem] xl:fixed xl:z-10 xl:top-40 xl:inset-x-3/4 xl:overflow-y-auto;
 }
