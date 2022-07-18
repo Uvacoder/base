@@ -9,6 +9,7 @@ import { LocaleProvider } from '@/lib/locale'
 import Scripts from '@/components/Scripts'
 import { AppContext } from '@/context/app-context'
 import { useState } from 'react'
+import ProgressBar from 'react-scroll-progress-bar'
 
 const Ackee = dynamic(() => import('@/components/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
@@ -20,6 +21,7 @@ function MyApp ({ Component, pageProps }) {
   return (
     <>
       <Scripts />
+      <ProgressBar bgcolor="#A9A9A9" />
       <LocaleProvider>
         <AppContext.Provider value={{ context, setContext }}>
           <>
