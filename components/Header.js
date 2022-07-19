@@ -26,22 +26,22 @@ const NavBar = () => {
         {links.map(
           (link) =>
             link.show && (
-              <li
-                key={link.id}
-                className="block ml-4 text-gray-400 hover:text-black dark:hover:text-gray-50 nav"
-              >
-                <Link href={link.to}>
+              <Link href={link.to} passHref>
+                <li
+                  key={link.id}
+                  className="block rounded py-1 px-3 text-gray-600 hover:text-black hover:bg-gray-200 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-700/30 nav cursor-pointer"
+                >
                   <a>{link.name}</a>
-                </Link>
-              </li>
+                </li>
+              </Link>
             )
         )}
-        <li className="block ml-4 nav text-gray-400">
+        <li className="block ml-2 nav text-gray-400">
           {context.isDark
             ? (
             <IoSunnyOutline
               onClick={toggle}
-              className="w-6 h-6 -mt-0.5 cursor-pointer hover:text-white hover:scale-110 active:scale-90 transition-transform duration-200"
+              className="w-6 h-6 mt-0.5 cursor-pointer hover:text-white hover:scale-110 active:scale-90 transition-transform duration-200"
             />
               )
             : (
