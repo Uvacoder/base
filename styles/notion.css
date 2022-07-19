@@ -56,6 +56,7 @@
 
 .notion-list {
   @apply py-2;
+  width: 100%;
 }
 
 .notion-toggle {
@@ -94,6 +95,7 @@
 .notion {
   @apply text-gray-700 dark:text-gray-200;
   overflow-wrap: break-word;
+  word-break: break-word;
 }
 .notion,
 .notion-text,

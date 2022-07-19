@@ -4,7 +4,10 @@ import React from 'react'
 
 const ProjectLayout = ({ projects = [] }) => {
   return (
-    <Container>
+    <Container
+      title="Github Repos"
+      description="Github Repos I love"
+    >
       <p className="text-lg font-light leading-7 text-gray-500 dark:text-gray-400 mb-4 grid place-items-center">
         A list of Github repositories that I love ❤️
       </p>
