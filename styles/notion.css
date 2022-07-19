@@ -268,7 +268,3 @@ pre[class*='language-'] {
 .dark .notion-code {
   background-color: rgb(220, 220, 220);
 }
-
-.notion-code > code {
-  @apply text-gray-900;
-}
