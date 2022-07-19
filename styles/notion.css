@@ -166,22 +166,6 @@ pre[class*='language-'] {
   @apply border-blue-400;
 }
 
-/* scrollbar */
-pre, div, p {
-  scrollbar-width: thin !important;
-  scrollbar-color: #b8b8b880 #ffffff00 !important;
-}
-pre::-webkit-scrollbar, div::-webkit-scrollbar {
-  width: 5px !important;
-  height: 5px !important;
-}
-pre::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
-  background: #ffffff00 !important;
-}
-pre::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
-  background-color: #b8b8b880 !important;
-}
-
 .notion-viewport {
   z-index: -10;
 }
