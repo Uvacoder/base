@@ -86,7 +86,7 @@
 }
 
 .notion-simple-table td {
-  @apply border-gray-200/50 dark:border-gray-600/50;
+  @apply border-gray-400 dark:border-gray-600/50;
   @apply px-3 pb-1.5 pt-1.5;
 }
 
@@ -133,8 +133,16 @@ svg + .notion-page-title-text {
 
 .notion-bookmark {
   @apply border;
-  @apply dark:border-gray-200/20;
+  @apply border-gray-100 dark:border-gray-700;
   color: inherit;
+}
+
+.token.operator {
+  background-color: transparent;
+}
+
+.dark .token.operator {
+  background-color: rgb(220, 220, 220);
 }
 
 .notion-bookmark .notion-bookmark-title,
@@ -148,17 +156,6 @@ svg + .notion-page-title-text {
 
 .notion-bookmark .notion-bookmark-description {
   @apply text-gray-600 dark:text-gray-400;
-}
-
-:not(pre)>code[class*=language-], pre[class*=language-] {
-  background-color: #191919 !important;
-  padding: 8px 16px;
-  @apply border border-gray-200/20;
-  scrollbar-width: thin;
-}
-
-code[class*=language-], pre[class*=language-] {
-  font-family: 'IBM Plex Mono','Consolas','Monaco','Andale Mono','Ubuntu Mono',monospace !important;
 }
 
 pre[class*='language-'] {
@@ -200,7 +197,9 @@ pre::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
   @apply px-0;
 }
 .notion-quote {
+  @apply dark:border-gray-600;
   padding: 0.2em 0.9em;
+  font-size: 1em;
 }
 .notion-collection {
   @apply max-w-full;
@@ -260,13 +259,6 @@ pre::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
   background: rgba(45, 170, 219, 0.3);
 }
 
-.notion-inline-code {
-  @apply text-primary-500 dark:text-primary-300;
-  @apply bg-primary-300/20 dark:bg-white/10;
-  font-size: 85% !important;
-  font-family: 'IBM Plex Mono', monospace !important;
-}
-
 .notion-text:first-child {
   @apply mt-2;
 }
@@ -278,4 +270,21 @@ pre::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
 /* floating TOC */
 .notion-table-of-contents {
   @apply xl:max-w-xs xl:max-h-[30rem] xl:fixed xl:z-10 xl:top-40 xl:inset-x-3/4 xl:overflow-y-auto;
+}
+
+.notion-code {
+  @apply dark:invert dark:hue-rotate-180;
+}
+
+.notion-code {
+  padding: 10px 16px 10px 16px !important;
+  line-height: 1.5rem !important;
+}
+
+.dark .notion-code {
+  background-color: rgb(220, 220, 220);
+}
+
+.notion-code > code {
+  @apply text-gray-900;
 }
