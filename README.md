@@ -64,6 +64,6 @@ It is a static site build on top of <a href="https://notion.so" target="_blank">
 # 📱 Technical details
 
 - **Generation**: Next.js and Incremental Static Regeneration
-- **Page render**: [react-notion-x](https://github.com/NotionX/react-notion-x)
+- **Page render**: react-notion-x
 - **Style**: Tailwind CSS and `@tailwindcss/jit` compiler
 - **Comments**: Gitalk, Cusdis and more
