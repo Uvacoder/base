@@ -26,14 +26,14 @@ const NavBar = () => {
         {links.map(
           (link) =>
             link.show && (
-              <Link href={link.to} passHref>
-                <li
+              <li
                   key={link.id}
                   className="block rounded ml-4 text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-gray-50 nav cursor-pointer"
                 >
-                  <a>{link.name}</a>
-                </li>
-              </Link>
+                <Link href={link.to}>
+                    <a>{link.name}</a>
+                </Link>
+              </li>
             )
         )}
         <li className="block ml-4 nav text-gray-400">
