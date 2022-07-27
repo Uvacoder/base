@@ -9,7 +9,7 @@ const HighlightLayout = ({ highlights = [] }) => {
       description="Words of wisdom that I want to save"
     >
       <p className="text-lg font-light leading-7 text-gray-500 dark:text-gray-400 mb-8 grid place-items-center">
-        So many words, so little time.
+        So many words, so little time
       </p>
       <div className="relative flex flex-wrap">
         {highlights
