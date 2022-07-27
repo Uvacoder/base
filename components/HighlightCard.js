@@ -3,11 +3,11 @@ import React from 'react'
 const HighlightCard = ({ Title, URL, Highlight }) => {
   return (
     <div className="w-full p-4 rounded-lg md:hover:bg-gray-200 md:hover:bg-opacity-40 md:dark:hover:bg-gray-800 md:dark:hover:bg-opacity-50 transition-all duration-500 hover:scale-105 mb-8">
-      <a className="cursor-nw-resize" target="_blank" rel="noopener noreferrer" href={URL}>
+      <a target="_blank" rel="noopener noreferrer" href={URL}>
         <blockquote>
           <div className="text-md relative md:flex-grow">
             <svg
-              className="absolute top-0 left-0 h-8 w-8 -translate-x-9 -translate-y-9 transform text-gray-500 dark:text-gray-300"
+              className="top-0 left-0 h-8 w-8 -translate-x-9 -translate-y-9 transform text-gray-500 dark:text-gray-300 hidden sm:flex absolute"
               fill="currentColor"
               viewBox="0 0 32 32"
               aria-hidden="true"

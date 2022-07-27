@@ -11,6 +11,8 @@ import CharmStack from '@/lib/icon/CharmStack'
 import CharmPerson from '@/lib/icon/CharmPerson'
 import CharmSearch from '@/lib/icon/CharmSearch'
 import CharmBookmark from '@/lib/icon/CharmBookmark'
+import CharmSun from '@/lib/icon/CharmSun'
+import CharmMoon from '@/lib/icon/CharmMoon'
 
 const NavBar = () => {
   const locale = useLocale()
@@ -93,7 +95,7 @@ const NavBar = () => {
                 onClick={toggle}
                 className="w-6 h-6 -mt-0.5 cursor-pointer hover:text-white hover:scale-110 active:scale-90 transition-transform duration-200 hidden md:flex"
               />
-              <IoSunnyOutline
+              <CharmSun
                 onClick={toggle}
                 className="w-5 h-5 mt-1.5 -ml-2 mr-3 cursor-pointer hover:text-white hover:scale-110 active:scale-90 transition-transform duration-200 md:hidden lg:hidden"
               />
@@ -103,7 +105,11 @@ const NavBar = () => {
             <>
               <IoMoonSharp
                 onClick={toggle}
-                className="w-5 h-5 cursor-pointer hover:text-black hover:scale-110 active:scale-90 transition-transform duration-200"
+                className="w-5 h-5 cursor-pointer hover:text-black hover:scale-110 active:scale-90 transition-transform duration-200  hidden md:flex"
+              />
+              <CharmMoon
+                onClick={toggle}
+                className="w-5 h-5 mt-1.5 -ml-2 mr-3 cursor-pointer hover:text-black hover:scale-110 active:scale-90 transition-transform duration-200 md:hidden lg:hidden"
               />
             </>
               )}
