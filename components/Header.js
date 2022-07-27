@@ -5,15 +5,52 @@ import { useLocale } from '@/lib/locale'
 import SvgComponent from '@/components/SVG'
 import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
 import { AppContext } from '@/context/app-context'
+import { useRouter } from 'next/router'
+import CharmHome from '@/lib/icon/CharmHome'
+import CharmStack from '@/lib/icon/CharmStack'
+import CharmPerson from '@/lib/icon/CharmPerson'
+import CharmSearch from '@/lib/icon/CharmSearch'
+import CharmBookmark from '@/lib/icon/CharmBookmark'
 
 const NavBar = () => {
   const locale = useLocale()
+  const router = useRouter()
   const links = [
-    { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
-    { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.PROJECT, to: '/project', show: BLOG.showProject },
-    { id: 3, name: locale.NAV.HIGHLIGHT, to: '/highlight', show: BLOG.showHighlight },
-    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
+    {
+      id: 0,
+      name: locale.NAV.INDEX,
+      to: BLOG.path || '/',
+      show: true,
+      icon: <CharmHome />
+    },
+    {
+      id: 1,
+      name: locale.NAV.ABOUT,
+      to: '/about',
+      show: BLOG.showAbout,
+      icon: <CharmPerson />
+    },
+    {
+      id: 2,
+      name: locale.NAV.PROJECT,
+      to: '/project',
+      show: BLOG.showProject,
+      icon: <CharmStack />
+    },
+    {
+      id: 3,
+      name: locale.NAV.HIGHLIGHT,
+      to: '/highlight',
+      show: BLOG.showHighlight,
+      icon: <CharmBookmark />
+    },
+    {
+      id: 4,
+      name: locale.NAV.SEARCH,
+      to: '/search',
+      show: true,
+      icon: <CharmSearch />
+    }
   ]
   const { context, setContext } = useContext(AppContext)
 
@@ -27,29 +64,48 @@ const NavBar = () => {
         {links.map(
           (link) =>
             link.show && (
-              <li
+              <div key={link.id}>
+                <li
                   key={link.id}
-                  className="block rounded ml-4 text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-gray-50 nav cursor-pointer"
+                  className="rounded ml-4 text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-gray-50 nav cursor-pointer hidden md:flex"
                 >
-                <Link href={link.to}>
+                  <Link href={link.to}>
                     <a>{link.name}</a>
-                </Link>
-              </li>
+                  </Link>
+                </li>
+                <button
+                  aria-label={link.name}
+                  title={link.name}
+                  type="button"
+                  className="w-8 h-8 p-1 ml-1 rounded sm:ml-4 hover:scale-110 active:scale-90 flex items-center justify-center transition-transform duration-200 lg:hidden md:hidden"
+                  onClick={() => router.push(link.to)}
+                >
+                  {link.icon}
+                </button>
+              </div>
             )
         )}
         <li className="block ml-4 nav text-gray-400">
           {context.isDark
             ? (
-            <IoSunnyOutline
-              onClick={toggle}
-              className="w-6 h-6 -mt-0.5 cursor-pointer hover:text-white hover:scale-110 active:scale-90 transition-transform duration-200"
-            />
+            <>
+              <IoSunnyOutline
+                onClick={toggle}
+                className="w-6 h-6 -mt-0.5 cursor-pointer hover:text-white hover:scale-110 active:scale-90 transition-transform duration-200 hidden md:flex"
+              />
+              <IoSunnyOutline
+                onClick={toggle}
+                className="w-5 h-5 mt-1.5 -ml-2 mr-3 cursor-pointer hover:text-white hover:scale-110 active:scale-90 transition-transform duration-200 md:hidden lg:hidden"
+              />
+            </>
               )
             : (
-            <IoMoonSharp
-              onClick={toggle}
-              className="w-5 h-5 cursor-pointer hover:text-black hover:scale-110 active:scale-90 transition-transform duration-200"
-            />
+            <>
+              <IoMoonSharp
+                onClick={toggle}
+                className="w-5 h-5 cursor-pointer hover:text-black hover:scale-110 active:scale-90 transition-transform duration-200"
+              />
+            </>
               )}
         </li>
       </ul>
