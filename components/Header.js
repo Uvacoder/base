@@ -12,6 +12,7 @@ const NavBar = () => {
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
     { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
     { id: 2, name: locale.NAV.PROJECT, to: '/project', show: BLOG.showProject },
+    { id: 3, name: locale.NAV.HIGHLIGHT, to: '/highlight', show: BLOG.showHighlight },
     { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
   const { context, setContext } = useContext(AppContext)
@@ -106,8 +107,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
               )
             : (
             <p className="ml-2 font-normal text-day dark:text-night header-name">
-              {BLOG.title} |{' '}
-              <span className="font-normal">{BLOG.description}</span>
+              {BLOG.title}
             </p>
               )}
         </div>
