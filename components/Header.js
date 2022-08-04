@@ -13,6 +13,7 @@ import CharmSearch from '@/lib/icon/CharmSearch'
 import CharmBookmark from '@/lib/icon/CharmBookmark'
 import CharmSun from '@/lib/icon/CharmSun'
 import CharmMoon from '@/lib/icon/CharmMoon'
+import CharmTwitter from '@/lib/icon/CharmTwitter'
 
 const NavBar = () => {
   const locale = useLocale()
@@ -48,6 +49,13 @@ const NavBar = () => {
     },
     {
       id: 4,
+      name: locale.NAV.TWEET,
+      to: '/tweet',
+      show: BLOG.showTweet,
+      icon: <CharmTwitter />
+    },
+    {
+      id: 5,
       name: locale.NAV.SEARCH,
       to: '/search',
       show: true,

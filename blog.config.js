@@ -16,6 +16,7 @@ const BLOG = {
   sortByDate: true,
   showProject: true,
   showHighlight: true,
+  showTweet: true,
   showAbout: true,
   showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
@@ -29,6 +30,7 @@ const BLOG = {
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN,
   notionProjectPageId: process.env.NOTION_PROJECT_PAGE_ID,
   notionHighlightPageId: process.env.NOTION_HIGHLIGHT_PAGE_ID,
+  notionTweetPageId: process.env.NOTION_TWEET_PAGE_ID,
   analytics: {
     provider: '', // Currently we support Google Analytics and Ackee, please fill with 'ga' or 'ackee', leave it empty to disable it.
     ackeeConfig: {
