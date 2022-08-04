@@ -5,7 +5,7 @@ import ProjectTag from '@/components/ProjectTag'
 const ProjectCard = ({ name, description, source, website, tags }) => {
   return (
     <div className="p-4 sm:w-1/2" style={{ maxWidth: '544px' }}>
-      <div className="h-full transform overflow-hidden border border-solid border-gray-200 transition duration-500 hover:scale-105 hover:border-primary-500 dark:border-gray-700 dark:hover:border-primary-500">
+      <div className="h-full transform overflow-hidden border border-solid border-gray-200 transition duration-200 hover:scale-105 hover:border-primary-500 dark:border-gray-700 dark:hover:border-primary-500">
         <div className="p-4">
           <div className="flex flex-row items-center justify-between">
             <div className="my-2">

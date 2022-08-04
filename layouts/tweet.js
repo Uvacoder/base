@@ -9,7 +9,7 @@ const TweetLayout = ({ tweets = [] }) => {
       description="This is a collection of tweets I've enjoyed"
     >
       <p className="text-lg font-light leading-7 text-gray-500 dark:text-gray-400 mb-8 grid place-items-center">
-        This is a collection of tweets I have enjoyed
+        A collection of tweets I found useful
       </p>
       <div className="relative flex flex-wrap">
         {tweets

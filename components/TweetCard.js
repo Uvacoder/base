@@ -21,7 +21,7 @@ export default function Tweet ({
   const formattedTweet = Tweet.replace(':', '')
 
   return (
-    <div className=" my-3 w-full max-w-3xl rounded-md border border-gray-200 bg-white px-4 py-4 shadow-lg dark:border-zinc-900 dark:bg-zinc-900">
+    <div className=" my-3 w-full max-w-3xl border border-gray-200 bg-white px-4 py-4 shadow-lg dark:border-zinc-900 dark:bg-zinc-900 hover:scale-105 transition duration-200">
       <div className="flex items-center">
         <a
           target="_blank"

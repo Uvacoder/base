@@ -2,7 +2,7 @@ import React from 'react'
 
 const HighlightCard = ({ Title, URL, Highlight }) => {
   return (
-    <div className="w-full p-4 rounded-lg md:hover:bg-gray-200 md:hover:bg-opacity-40 md:dark:hover:bg-gray-800 md:dark:hover:bg-opacity-50 transition-all duration-500 hover:scale-105 mb-8">
+    <div className="w-full p-4 rounded-md md:hover:bg-gray-200 md:hover:bg-opacity-40 md:dark:hover:bg-gray-800 md:dark:hover:bg-opacity-50 transition-all duration-300 hover:scale-105 mb-8">
       <a target="_blank" rel="noopener noreferrer" href={URL}>
         <blockquote>
           <div className="text-md relative md:flex-grow">

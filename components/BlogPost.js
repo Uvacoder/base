@@ -9,7 +9,7 @@ const BlogPost = ({ post }) => {
       <a>
         <article
           key={post.id}
-          className="mb-4 lg:p-4 md:p-4 p-4 hover:bg-gray-300/50 dark:hover:bg-gray-300/10 transition duration-400 hover:scale-105"
+          className="mb-4 lg:p-4 md:p-4 p-4 hover:bg-gray-300/50 dark:hover:bg-gray-300/10 transition duration-200 hover:scale-105"
         >
           <header className="flex flex-col justify-between md:flex-row md:items-baseline">
             <h2 className="text-lg md:text-xl font-medium mb-2 cursor-pointer text-black dark:text-gray-100 transition duration-500 ease-in-out">
